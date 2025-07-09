@@ -1,0 +1,86 @@
+.sertifikat-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.sertifikat-deskripsi {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.sertifikat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.sertifikat-item {
+  background-color: #100e9a;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.sertifikat-item:hover {
+  transform: scale(1.05);
+}
+
+.sertifikat-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.sertifikat-caption, .caption {
+  text-align: center; /* Ratakan teks ke tengah */
+  display: block;     /* Pastikan blok agar center bekerja */
+  margin-left: auto;  /* Tengah otomatis */
+  margin-right: auto; /* Tengah otomatis */
+}
+
+.caption {
+  filter: none !important;
+  opacity: 1 !important;
+  transition: none ;
+  color: #f5f5f5;
+}
+.caption.aos-animate {
+  filter: none !important;
+  opacity: 1 !important;
+}
+/* Efek blur hanya saat mode gelap aktif */
+body.dark-mode .sertifikat-caption {
+  filter: blur(1px);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Saat hover, kembalikan jadi jelas */
+body.dark-mode .sertifikat-caption:hover {
+  filter: none;
+  opacity: 1;
+}
+/* Efek hanya saat mode gelap */
+body.dark-mode .sertifikat-caption {
+  filter: blur(1px);
+  opacity: 0.7;
+  color: #fbfbfb; /* Tetap pakai warna terang seperti tema terang */
+  transition: all 0.3s ease;
+}
+
+/* Saat hover, kembalikan seperti semula */
+body.dark-mode .sertifikat-caption:hover {
+  filter: none;
+  opacity: 1;
+  color: #333; /* Pastikan tetap terang saat hover juga */
+}

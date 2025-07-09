@@ -1,0 +1,155 @@
+/* ====== VARIABEL TEMA ====== */
+:root {
+  --container-bg: #f7f7f7;
+  --text-bg: rgba(0, 0, 0, 0.05);
+  --text-color: #111;
+  --read-more-color: #5f0a6c;
+  --title-bg: linear-gradient(to bottom, #ffffff, #9ba2a6);
+}
+
+body.dark-mode {
+  --container-bg: #300532;
+  --text-bg: rgba(255, 255, 255, 0.08);
+  --text-color: #fff;
+  --read-more-color: #fdb3ff;
+  --title-bg: linear-gradient(to bottom, #240324, #57115d);
+}
+
+/* ====== JUDUL ====== */
+h2.prestasi {
+  background: var(--title-bg);
+  color: var(--text-color);
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  margin-top: 60px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ====== KONTENER SLIDE ====== */
+#slideContainer {
+  max-width: 800px;
+  margin: 100px auto;
+  position: relative;
+  background-color: var(--container-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: background-color 0.4s ease;
+  min-height: 450px;
+}
+
+/* ====== SLIDE ====== */
+.slide {
+  display: none;
+  text-align: center;
+  color: var(--text-color);
+  padding-bottom: 1rem;
+}
+
+.slide.show {
+  display: block;
+  animation: fadein 0.8s ease-in-out forwards;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.4s ease, box-shadow 0.3s ease; /* Tambahan efek transisi */
+}
+
+.slide img:hover {
+  transform: scale(1.05); /* Membesarkan gambar 5% */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Opsional: bayangan saat hover */
+}
+
+
+.slide p {
+  padding: 1.2rem 2.5rem; /* Tambah padding kiri-kanan agar teks tidak ketabrak tombol */
+  background-color: var(--text-bg);
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ====== LINK DALAM TEKS ====== */
+.slide p a {
+  color: var(--read-more-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.slide p a:hover {
+  text-decoration: underline;
+}
+
+/* ====== TOMBOL SLIDER ====== */
+.sliderBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(145deg, #5f0a6c, #8c0b9f);
+  border: none;
+  color: white;
+  padding: 0.8rem 1rem;
+  z-index: 10;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Tombol saat hover */
+.sliderBtn:hover {
+  transform: translateY(-50%) scale(1.1);
+  background: linear-gradient(145deg, #8c0b9f, #5f0a6c);
+}
+
+/* Tombol kiri dan kanan */
+#prev { left: -10px; }
+#next { right: -10px; }
+
+/* ====== RESPONSIVE ====== */
+@media screen and (max-width: 722px) {
+  #slideContainer {
+    width: 95%;
+    min-height: 400px;
+  }
+
+  .sliderBtn {
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+  }
+
+  .slide p {
+    font-size: 1rem;
+    padding: 0.8rem 2.2rem;
+  }
+}
+
+/* ====== OPSIONAL: TOMBOL MUNCUL SAAT HOVER SLIDE SAJA ====== */
+/*
+.sliderBtn {
+  opacity: 0;
+  pointer-events: none;
+}
+#slideContainer:hover .sliderBtn {
+  opacity: 1;
+  pointer-events: auto;
+}
+*/

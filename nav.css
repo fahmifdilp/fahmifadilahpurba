@@ -1,0 +1,117 @@
+/* Tombol Hamburger di kanan atas */
+.hamburger-btn {
+  position: absolute;       /* agar bisa ditempatkan bebas */
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tiga garis hamburger */
+.hamburger-btn span {
+  display: block;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Garis tengah lebih pendek dan geser ke kanan */
+.hamburger-btn span:nth-child(2) {
+  width: 60%;
+  align-self: flex-end;
+}
+
+/* Garis atas & bawah tetap panjang */
+.hamburger-btn span:nth-child(1),
+.hamburger-btn span:nth-child(3) {
+  width: 100%;
+}
+
+/* Menu navigasi muncul tepat di bawah tombol */
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 50px;         /* geser ke bawah dari tombol */
+  right: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 998;
+}
+
+/* Munculkan saat diklik */
+.nav-menu.show {
+  display: block;
+}
+
+/* Isi menu */
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  margin-bottom: 10px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  color: #007BFF;
+}
+/* === DARK MODE SUPPORT === */
+body.dark-mode .nav-menu {
+  background-color: #222;
+  border-color: #444;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .nav-menu a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .nav-menu a:hover {
+  color: #1E90FF;
+}
+
+body.dark-mode .hamburger-btn span {
+  background-color: #f0f0f0;
+}
+/* Tombol toggle tema */
+#themeToggle {
+  position: fixed;
+  top: 15px;
+  right: 70px; /* agar tidak bertabrakan dengan hamburger */
+  z-index: 9999;
+  background-color: white;
+  color: #111;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode #themeToggle {
+  background-color: #111;
+  color: white;
+}

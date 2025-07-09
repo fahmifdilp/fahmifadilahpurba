@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Branding</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="nav-container"></div>
+  
+  <section class="landing">
+    <div class="landing-text">
+      
+      <h1 id="typed-text">Halo, Saya<span class="highlight"> Fahmi</span></h1>
+
+     
+      <p class="subtitle" id="typing-loop">Seorang Junior Engineer & Web Developer 🚀</p>
+  
+
+      <a href="#slideContainer" class="cta-btn">Lihat Prestasi Saya</a>
+    </div>
+    <div class="landing-image">
+      <img src="hero-fahmi.webp" alt="Foto Fahmi" />
+    </div>
+  </section>
+  
+  <br>
+  <h2 class="nama" id="typing"></h2>
+  <button id="themeToggle" class="theme-toggle">🌙</button>
+
+  <!-- Perkenalan -->
+  <div class="perkenalan-container" data-aos="fade-up">
+    <p class="text">
+      Hello, I am a junior engineer focused on development in the robotics field. My expertise lies in designing and implementing technical solutions for complex robotics systems. I have experience in using programming languages ​​specific to robotics, such as <b><i>Python</i></b> or <b><i>C++</i></b>, as well as a deep understanding of robotics frameworks such as ROS (Robot Operating System).
+    </p>
+    <img src="foto_fahmi.jpg" alt="Fahmi Fadilah Purba" class="foto-bulat">
+  </div>
+
+  <!-- Pendidikan -->
+  <div class="full-bleed education-bg">
+    <h2 class="section-header" data-aos="fade-up">Education</h2>
+  </div>
+
+  <div class="pendidikan" data-aos="fade-left">
+    <img src="foto-pendidikan.jpg" alt="fasilitas UMSU" class="lab">
+    <p class="text-pendidikan">I studied at the University of Muhammadiyah North Sumatra (UMSU), majoring in Information Technology. During my studies, I studied various important aspects of technology, from programming, computer networks, system security, to artificial intelligence and embedded systems. My main focus was on the development of Internet of Things (IoT) and robotics-based systems, where I actively participated in various practical projects and research that deepened my understanding of the application of technology in real life.
+
+        The academic environment at UMSU gave me the opportunity to develop technical skills and critical thinking, as well as foster a collaborative spirit in solving various technological challenges. With the support of lecturers and adequate laboratory facilities, I was able to hone my skills in designing intelligent systems and innovating independently and in teams.</p>
+  </div>
+
+  <!-- Keahlian Web -->
+  <div class="full-bleed expertise-bg">
+    <h2 class="section-header1" data-aos="fade-up">Supporting Expertise</h2>
+  </div>
+
+  <div class="pendukung-container" data-aos="fade-right">
+    <p class="keahlian">Currently, I am also expanding my expertise in web development. I started learning how to build websites, starting from the basics such as HTML, CSS, and JavaScript, to modern frameworks such as React. My goal is to develop interactive web interfaces that can be directly connected to robotics systems, such as sensor monitoring dashboards, web-based robot controls, and real-time IoT integration. By combining my expertise in robotics and web development, I want to create more holistic and integrated technology solutions.</p>
+    <img src="komputer.jpg" alt="pemograman" class="coding">
+  </div>
+
+  <!-- Pengalaman -->
+  <div class="full-bleed experience-bg">
+    <h2 class="section-header" data-aos="fade-up">Experience</h2>
+  </div>
+
+  <div class="pertim" data-aos="fade-left">
+    <img src="tim.jpg" alt="tim innovillage 2024" class="tim">
+    <p class="pengalaman">My experience involves designing and developing hardware and software for robots, including sensor integration and motor control programming. In addition, I have skills in designing navigation algorithms and processing sensor data to improve robot performance.
+
+        In team collaboration, I ensure smooth development by using version control tools such as Git and actively participating in team projects through GitHub. With a combination of technical skills in robotics and collaborative abilities, I am ready to make significant contributions to robotics development projects.</p>
+  </div>
+
+  <!-- Prestasi -->
+  <div id="prestasi-container"></div>
+
+  <!-- Form Kontak -->
+  <div class="contact-form">
+    <h2>Hubungi Saya</h2>
+    <form id="contactForm">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Pesan:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Kirim Pesan</button>
+    </form>
+
+    <div id="formMessage" style="margin-top: 10px; font-weight: bold;"></div>
+  </div>
+
+  <!-- Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script src="nav.js"></script>
+
+</body>
+</html>

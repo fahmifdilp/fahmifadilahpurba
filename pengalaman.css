@@ -1,0 +1,148 @@
+:root {
+  --bg-light: #f4f4f4;
+  --text-light: #111;
+  --bg-dark: #1c1c1c;
+  --text-dark: #eee;
+  --accent: #eed2f2;
+}
+/* Mencegah scroll horizontal */
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Box-sizing global (untuk padding/border agar tidak bikin elemen melebar) */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  line-height: 1.6;
+  background-color: blue;
+  background-image: url("backround.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #9f4f4f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* === Dark Mode Styles === */
+body.dark-mode {
+  background-color: #973838;
+  color: #f1f1f1;
+  background-image: url("dark.png");
+}
+
+.dark-mode p,
+.dark-mode h2,
+.dark-mode .nama {
+  color: #f1f1f1;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(125, 23, 23, 0.2);
+}
+body.dark-mode .theme-toggle {
+  background: #333;
+  color: white;
+}
+
+.judul {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.deskripsi {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.timeline-item img {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Teks pengalaman */
+.timeline-item .text {
+  flex: 1;
+  min-width: 250px;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7); /* Light mode */
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .timeline-item .text {
+  background-color: #100e9a; /* Dark mode */
+}
+
+.timeline-item h3 {
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  line-height: 1.6;
+}
+
+/* Zigzag */
+.timeline-item.right {
+  flex-direction: row-reverse;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .timeline-item img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .timeline-item .text {
+    padding-top: 10px;
+  }
+}

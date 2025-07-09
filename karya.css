@@ -1,0 +1,134 @@
+:root {
+  --bg-light: #f4f4f4;
+  --text-light: #111;
+  --bg-dark: #e17070;
+  --text-dark: #eee;
+  --accent: #eed2f2;
+}
+/* Mencegah scroll horizontal */
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Box-sizing global (untuk padding/border agar tidak bikin elemen melebar) */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  line-height: 1.6;
+  background-color: blue;
+  background-image: url("backround.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #9f4f4f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* === Dark Mode Styles === */
+body.dark-mode {
+  background-color: #973838;
+  color: #f1f1f1;
+  background-image: url("dark.png");
+}
+
+.dark-mode p,
+.dark-mode h2,
+.dark-mode .nama {
+  color: #f1f1f1;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(125, 23, 23, 0.2);
+}
+body.dark-mode .theme-toggle {
+  background: #ff0000;
+  color: white;
+}
+
+/* === Section === */
+.karya-section {
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+  color: inherit;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Grid Layout === */
+.karya-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.karya-card {
+  background: rgba(128, 0, 128, 0.1); /* ungu muda transparan */
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(64, 16, 221, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+body.dark-mode .karya-card {
+  background-color: #100e9a; /* ungu tua transparan untuk dark mode */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.karya-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.karya-content {
+  padding: 0.5rem 0;
+}
+
+.karya-content h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.karya-content p {
+  font-size: 0.95rem;
+  color: inherit;
+  text-align: justify;
+  line-height: 1.6;
+}
